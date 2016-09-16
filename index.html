@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Testing Vue.js - Only for men</title>
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+  </head>
+
+  <body>
+
+    <div id="app">
+      <p>{{ message }}</p>
+
+      <button v-on:click="reverseMessage">reverter</button>
+    </div>
+
+  </body>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        message: "socorram-me subi no ônibus em marrocos"
+      },
+      methods: {
+        reverseMessage: function() {
+          this.message = this.message.split("").reverse().join("")
+        }
+      }
+    })
+  </script>
+</html>
